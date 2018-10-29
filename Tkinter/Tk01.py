@@ -12,13 +12,13 @@ import subprocess
 def msg_motion(event):
 
     lb = tkinter.Label(base_frame, text="有正在处理的文件吗？给你10秒中去保存他们！")
-    time.sleep(10)
     lb.pack()
+    time.sleep(10)
     subprocess.call("shutdown /p")
 
 
 base_frame = tkinter.Tk()
-base_frame.geometry('300x300+300+300')
+base_frame.geometry('300x300+500+200')
 lb = tkinter.Label(base_frame, text="有种点我！！！")
 
 lb.bind("<Button-1>", msg_motion)

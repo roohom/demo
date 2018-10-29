@@ -4,6 +4,10 @@
 # Author: roohom
 # Date  : 2018/10/29 0029
 
+import os
+import shutil
+import os.path as op
+import tkinter
 
 """
 本程序功能：
@@ -24,10 +28,7 @@
         - 使用if语句进行判断
         - 文件的删除、移动、复制、获取路径使用Python的os和shutil模块
 '''
-import os
-import shutil
-import os.path as op
-import tkinter
+
 
 # 获取批量文件处理的总路径
 

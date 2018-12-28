@@ -4,20 +4,16 @@
 # Author: roohom
 # Date  : 2018/10/10 0010
 
+print("this is a test programe!")
+print("this is a new keyboard!")
 
-def twoSum(nums, target):
-    """
-    :type nums: List[int]
-    :type target: int
-    :rtype: List[int]
-    """
-    for i in range(len(nums)):
-        for j in range(1, len(nums)):
-            if (nums[i] == target - nums[j]) and (i != j):
-                return [i, j]
+print("I am very glad to hear that news!")
 
 
-print(twoSum([3, 2, 1], 5))
+def myGlad():
+    for i in range(100):
+        print('Yeah I am glad!')
 
+myGlad()
 
 

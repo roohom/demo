@@ -6,14 +6,12 @@
 
 print("this is a test programe!")
 print("this is a new keyboard!")
-
 print("I am very glad to hear that news!")
 
 
 def myGlad():
     for i in range(100):
-        print('Yeah I am glad!')
+        print('yeah i am glad!')
+
 
 myGlad()
-
-

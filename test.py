@@ -4,14 +4,9 @@
 # Author: roohom
 # Date  : 2018/10/10 0010
 
-print("this is a test programe!")
-print("this is a new keyboard!")
-print("I am very glad to hear that news!")
+l = [1,2,34,45,6,7,8,909]
+
+l.remove(l[0])
+print(l)
 
 
-def myGlad():
-    for i in range(100):
-        print('yeah i am glad!')
-
-
-myGlad()

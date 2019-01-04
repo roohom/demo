@@ -4,9 +4,19 @@
 # Author: roohom
 # Date  : 2018/10/10 0010
 
-l = [1,2,34,45,6,7,8,909]
+import psutil
+import os,datetime
 
-l.remove(l[0])
-print(l)
 
+def main():
+        print("电脑的开机时间")
+
+        # 调用psutil.boot_time()函数返回开机的时间戳
+        dt = datetime.datetime.fromtimestamp(psutil.boot_time())
+        # 返回一个datetime对象
+        print(dt.strftime("%Y-%m-%d,%H:%M:%S"))
+
+
+if __name__=="__main__":
+    main()
 

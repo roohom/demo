@@ -12,8 +12,12 @@
 
 import urllib
 import urllib3
+import requests
 
-
-git_name = input("ENTER YOUR GIT NAME:")
+git_name = "roohom"
 url = "https://github.com/{}".format(git_name)
-
+rsp = requests.get(url)
+rsp.encoding = "utf-8"
+l = list(rsp.text)
+s = ",".join(l)
+print(s)

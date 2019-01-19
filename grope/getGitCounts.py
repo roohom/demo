@@ -18,6 +18,12 @@ git_name = "roohom"
 url = "https://github.com/{}".format(git_name)
 rsp = requests.get(url)
 rsp.encoding = "utf-8"
-l = list(rsp.text)
-s = ",".join(l)
-print(s)
+
+
+f = open("FILE01.txt", "w")
+f.write(rsp.text)
+f.seek(0, )
+length = f.tell()
+f.close()
+
+print("这个File的长度是：", length)

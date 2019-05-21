@@ -51,24 +51,8 @@ def no_music_distance(text):
         return "现在是北京时间{}".format(time.strftime("%Y-%m-%d %H:%M:%S"))
     elif '吃鸡' in text:
         return '马上来！！'
-    elif '要不要' in text:
-        return '要'
-    elif '是不是' in text:
-        return '是'
-    elif (text[-1] in ['吗', '嘛', '麻', '啊', '哈', '么', '嚒', '阿']) and text[0] == '你':
-        msg = text[:-1]
-        if len(msg) == 2:
-            return msg
-        elif len(msg) == 3:
-            msg = msg.replace('你', '我')
-            if msg[-1] == '我':
-                msg = msg[:-1]
-                msg = "%s你" % msg
-        else:
-            msg = msg.replace('你', '我')
-        return msg
     elif text in ['？', '?']:
-        return '傻吊'
+        return '嗯？'
     else:
         reply = Tuling.get_response(text)
         return reply

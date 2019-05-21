@@ -9,7 +9,7 @@ xiaodouKey = 'NENXd3UrekE3TD1HbmpDTUNnPVVISDNCcVJZQUFBPT0'
 xiaodouUrl = 'http://api.douqq.com/?key=' + xiaodouKey + '&msg='
 
 GONGNENG = '''
-############################################################
+#######################
 # .网易搜歌(打开音乐、关闭音乐)
 # .报时
 # .每日一句
@@ -53,7 +53,8 @@ GONGNENG = '''
 # .脑筋急转弯(脑筋急转弯)
 # .你与我的距离(距离、你在哪)
 # .成语接龙
-############################################################
+# .关闭服务(发送开启服务再次打开服务)
+#######################
 '''
 
 
@@ -64,11 +65,11 @@ def get_response(msg):
             if res.text.__contains__("<html>"):
                 return get_tuling(msg)
             else:
-                return res.text.replace("小豆", "本宝宝")
+                return res.text.replace("小豆", "俺")
         except Exception:
             return get_tuling(msg)
     except Exception:
-        return "本宝宝无法理解【%s】的含义" % msg
+        return "俺无法理解【%s】的含义" % msg
 
 
 def get_tuling(msg):
@@ -83,6 +84,6 @@ def get_tuling(msg):
         try:
             return title
         except Exception:
-            return "本宝宝无法理解【%s】的含义" % msg
+            return "俺无法理解【%s】的含义" % msg
     except Exception:
-        return "本宝宝无法理解【%s】的含义" % msg
+        return "俺无法理解【%s】的含义" % msg

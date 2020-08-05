@@ -10,6 +10,7 @@ def severFunc():
     # socket.SOCK_DGRAM:使用UDP通信
     sock = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 
+    # sock.bind(("127.0.0.1", 7852))
     addr = ("127.0.0.1", 7852)
     # 绑定ip和port
     sock.bind(addr)

@@ -10,7 +10,7 @@
 from socket import *
 
 host = "127.0.0.1"
-port = 8998
+port = 8999
 addr = (host, port)
 
 Socket_TCP = socket()

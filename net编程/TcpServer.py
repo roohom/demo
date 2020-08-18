@@ -8,7 +8,7 @@
 import socket
 
 host = "127.0.0.1"
-port = 8998
+port = 8999
 addr = (host, port)
 # 创建套接字
 Sock_TCP = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -16,6 +16,9 @@ Sock_TCP = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 Sock_TCP.bind(addr)
 
 Sock_TCP.listen(10)
+print(Sock_TCP.accept())
+print("=================")
+print(type(Sock_TCP.accept()))
 conn, addr = Sock_TCP.accept()
 
 while True:
